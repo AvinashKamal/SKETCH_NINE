@@ -1,0 +1,117 @@
+/* ----- DEFAULT STYLES ----- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+html, body {
+    height: 100vh;
+    font-family: 'Poppins' , sans-serif;
+    color: #000;
+    letter-spacing: 0.25rem;
+    line-height: 1.6;
+}
+
+/*----- SERVICES SECTION -----*/
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cover-page {
+    height: 30vh;
+    background: url('cover_page.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.cover-page::before {
+    content: '';
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    z-index: -10;
+    background: rgb(2,0,36);
+    background: linear-gradient(18deg, rgba(2,0,36,1) 0%, rgba(1,59,97,1) 28%, rgba(1,104,143,0.8886905103838411) 49%, rgba(1,151,191,0.5833683815323004) 72%, rgba(0,212,255,0.31726193895526966) 100%);
+}
+
+.cover-page__title {
+    z-index: 300;
+    margin-left: 2rem;
+    color: #fff;
+}
+
+.service-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.service-description {
+    flex: 70%;
+    line-height: 1.8;
+}
+.service-illustration {
+    flex: 50%;
+    line-height: 1.8;
+    display: flex;
+    justify-content: center;
+}
+
+.service-illustration img {
+    max-width: 30rem;
+}
+
+.service-projects {
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.project-item {
+    position: relative;
+}
+
+.project-image img {
+    object-fit: fill;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 14, 14, 0.5);
+    color: #fff;
+}
+
